@@ -1,0 +1,51 @@
+Query Run: 1
+Matches: 47054
+Average Time: 0.00115308 s
+Tokens Processed per Second: 1.98118e+09
+----------------------------------------
+Query Run: 2
+Matches: 746
+Average Time: 0.000169669 s
+Tokens Processed per Second: 1.34642e+10
+----------------------------------------
+Query Run: 3
+Matches: 0
+Average Time: 8.61335e-07 s
+Tokens Processed per Second: 2.65222e+12
+----------------------------------------
+Overall Average Time (for 3 queries): 0.000441203 s
+----------------------------------------
+Query Run: 1
+Matches: 47054
+Average Time: 0.00227414 s
+Tokens Processed per Second: 1.00453e+09
+----------------------------------------
+Query Run: 2
+Matches: 746
+Average Time: 0.000173309 s
+Tokens Processed per Second: 1.31814e+10
+----------------------------------------
+Query Run: 3
+Matches: 0
+Average Time: 8.23475e-07 s
+Tokens Processed per Second: 2.77416e+12
+----------------------------------------
+Overall Average Time (for 3 queries): 0.000816092 s
+----------------------------------------
+Query Run: 1
+Matches: 47054
+Average Time: 0.00227466 s
+Tokens Processed per Second: 1.0043e+09
+----------------------------------------
+Query Run: 2
+Matches: 746
+Average Time: 0.000172005 s
+Tokens Processed per Second: 1.32813e+10
+----------------------------------------
+Query Run: 3
+Matches: 0
+Average Time: 8.63015e-07 s
+Tokens Processed per Second: 2.64706e+12
+----------------------------------------
+Overall Average Time (for 3 queries): 0.000815844 s
+----------------------------------------
