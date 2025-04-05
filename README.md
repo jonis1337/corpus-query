@@ -1,8 +1,14 @@
 # Annotated Text Corpus Query Tool
 
+## Table of Contents
+1. [Project Overview](#project-overview)
+2. [Corpus File Format](#corpus-file-format)
+3. [Corpus Query Format](#corpus-query-format)
+4. [Installation](#installation)
+
 ## Project Overview
 
-This project is a simple tool for querying annotated text corpora, inspired by the paper *"Efficient corpus search using unary and binary indexes"* by Peter Ljunglöf and Nicholas Smallbone. An annotated text corpus is a collection of sentences where each token (word, punctuation, etc.) is annotated with attributes such as its lemma (dictionary form) and part-of-speech (POS) tag (e.g., noun, verb, adjective). These annotations enable advanced queries beyond simple string matching, such as finding all instances of an adjective followed by a form of the noun "house" (e.g., "red house," "big houses").
+This project is a simple tool for querying annotated text corpora, inspired by the paper *"Efficient corpus search using unary and binary indexes"* by Peter Ljunglöf and Nicholas Smallbone. An annotated text corpus is a collection of sentences where each token (word, punctuation, etc.) is annotated with attributes such as its lemma (dictionary form) and part-of-speech (POS) tag (e.g., noun, verb, adjective). These annotations enable advanced queries beyond simple string matching, such as finding all instances of an adjective followed by a form of the noun "house" (e.g., "red house," "big houses").
 
 The tool starts with basic data structures and algorithms and progressively incorporates more sophisticated techniques, such as unary and binary indexes, to optimize query performance as described in the referenced paper.
 
@@ -10,7 +16,7 @@ The tool starts with basic data structures and algorithms and progressively inco
 - Find all occurrences of an adjective followed by a form of "house":
   - Matches: "… steals fuel to warm his own house in Meknes." or "… collections by the provisionals in public houses were having partial success …"
 
-### Corpus File Format
+## Corpus File Format
 The corpus is stored in a text-based, line-oriented format with the following rules:
 - Lines starting with `#` are comments and ignored.
 - Empty lines separate sentences and are ignored.
@@ -57,7 +63,7 @@ available       AJ0     available       ADJ
 
 ```
 
-### Corpus Query Format
+## Corpus Query Format
 We first need to define the query language grammar and semantics.
 
 -   A *query* is a non-empty sequence of clauses.
@@ -92,11 +98,28 @@ The semantics of a query is as follows.
 -   A literal of the form `attr="value"` matches if the token's attribute `attr` is `value`. A literal of the form `attr!="value"` matches if the token's attribute `attr` is not `value`.
 -   The empty clause matches any token.
 -   Matches are case-sensitive.
-
-## Installation
-
-
-
  For example, the query `[pos="ART"] [lemma="house"]` matches any adjacent pair of tokens A B where the `pos`attribute of A is `ART` and the `lemma` attribute of B is `house`
 
- 
+ ## Installation
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/jonis1337/corpus-query.git
+   cd corpus-query
+   ```
+2. **Unzip the bnc-05M.csv text corpa**
+   ```bash
+   unzip  bnc-05M.csv.zip
+   ```
+3. **Compile**
+    ```bash
+    make
+    ```
+4. **Run**
+    ```
+    ./corpus bnc-05M.csv
+    ```
+5. **Sample query**
+    ```
+    [lemma="house"]
+    ```
+
