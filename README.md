@@ -120,6 +120,6 @@ The semantics of a query is as follows.
     ```
 5. **Sample query**
     ```
-    [lemma="house"]
+    Enter a query (or press Enter to exit): [lemma="house"]    
     ```
 
