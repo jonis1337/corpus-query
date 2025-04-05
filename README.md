@@ -104,6 +104,8 @@ The semantics of a query is as follows.
 1. **Clone the repository**
    ```bash
    git clone https://github.com/jonis1337/corpus-query.git
+   ```
+   ```bash
    cd corpus-query
    ```
 2. **Unzip the bnc-05M.csv text corpa**
