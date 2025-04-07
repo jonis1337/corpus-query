@@ -52,13 +52,20 @@ double benchmark_query(const Corpus &corpus, const Query &query, size_t total_to
 	return avg_time_s;
 }
 
-int main()
+int main(int argc, char *argv[])
 {
+    if (argc != 2)
+    {
+        std::cerr << "Usage: " << argv[0] << " <corpus_file.csv>" << std::endl;
+        return 1;
+    }
+
 	// clear terminal
 	std::cout << "\033[H\033[2J" << std::endl;
-	std::cout << "\033[1;34mLoading Corpus...\033[0m" << std::endl;
+	std::cout << "\033[1;34mIndexing Corpus...\033[0m" << std::endl;
 
-	Corpus corpus = load_corpus("doubble.csv");
+    // load the corpus
+	Corpus corpus = load_corpus(argv[1]);
 	build_indices(corpus);
 
 	/*uint32_t index = corpus.string2index["bodybuilder"];
